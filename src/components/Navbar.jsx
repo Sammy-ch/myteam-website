@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const Navbar = () => {
     return(
-        <header className={'midnight-green w-full flex items-center justify-between gap-5 py-[73px] px-[165px] relative '}>
+        <header className={'midnight-green w-full flex items-center justify-between gap-5 py-[73px] px-[165px] relative'}>
             <div>
                 <Image src={logo} alt={"my_logo"} className={"h-[35px] w-[210px] "}/>
             </div>
@@ -17,7 +17,7 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            <button className={"w-[180px] text-white rounded-full border px-[33px] py-[10px] "} >
+            <button className={"text-white rounded-full border h-[50px] w-[180px] px-[33px] py-[10px]"} >
                 contact us
             </button>
 

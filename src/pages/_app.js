@@ -2,7 +2,7 @@ import '@/styles/globals.css'
 import {Livvic} from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import {Head} from "next/document";
+import Head from "next/head";
 
 const livvic = Livvic({
     subsets:['latin'],
@@ -11,7 +11,11 @@ const livvic = Livvic({
 export default function App({ Component, pageProps }) {
   return (
       <>
-          <main className={`${livvic.className} w-full min-h-screen`}>
+          <Head>
+              <meta name="viewport" content="width=device-width, initial-scale=1" />
+              <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon" />
+          </Head>
+          <main className={`${livvic.className} w-full wrapper bg-white`}>
               <Navbar/>
               <Component {...pageProps} />
               <Footer/>
