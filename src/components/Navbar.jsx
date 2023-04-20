@@ -17,9 +17,11 @@ const Navbar = () => {
                 </nav>
             </div>
 
-            <button className={"text-white rounded-full border h-[50px] w-[180px] px-[33px] py-[10px]"} >
-                contact us
-            </button>
+            <Link href="/contact">
+                <button className={"text-white rounded-full border h-[50px] w-[180px] px-[33px] py-[10px]"}>
+                    contact us
+                </button>
+            </Link>
 
         </header>
     )

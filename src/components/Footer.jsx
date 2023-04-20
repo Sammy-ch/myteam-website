@@ -7,7 +7,7 @@ import Twitter from "public/images/icons/icon-twitter.svg";
 import Pinterest from "public/images/icons/icon-pinterest.svg";
 const Footer = () => {
     return (
-        <footer className={"w-full flex relative justify-between align-center py-[48px] px-[165px] bg-[#002529]"}>
+        <footer className={"w-full flex relative justify-between align-center py-[48px] px-[165px] bg-[#002529] h-full"}>
             <section className={"flex flex-row gap-[150px]"}>
                 <section className={"flex flex-col gap-7"}>
                     <Image src={logo} alt={"mylogo"} className={"h-[35px] w-[140px]"}/>

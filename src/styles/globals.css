@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/*CSS RESET*/
+/*!*CSS RESET*!*/
 #root, #__next {
   isolation: isolate;
 }
@@ -24,7 +24,18 @@ img, picture, video, canvas, svg {
 }
 input, button, textarea, select {
   font: inherit;
+  background-color: transparent;
 }
+
+textarea,input:focus{
+  outline: none;
+}
+
+textarea {
+  border-bottom: 1px solid white;
+  resize: none;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
   overflow-wrap: break-word;
 }
@@ -40,8 +51,6 @@ p, h1, h2, h3, h4, h5, h6 {
 .wrapper > * {
   grid-column: 2;
 }
-
-
 
 /*Primary colors*/
 .midnight-green{
@@ -109,4 +118,10 @@ p, h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-size: 15px;
   line-height: 25px;
+}
+
+.input{
+  border: none;
+  border-bottom: 1px solid white;
+  background-color: transparent;
 }

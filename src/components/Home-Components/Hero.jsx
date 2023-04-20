@@ -10,7 +10,7 @@ const Hero = () =>{
         </h1>
         <div className={"flex flex-col gap-4"}>
             <Image src={ovalPattern} alt={"pattern"} className={"absolute left-[-100px]"}/>
-            <div className={"w-[50px] h-[4px] bg-[#79C8C7]"}></div>
+            <div className={"w-[50px] h-[5px] bg-[#79C8C7]"}></div>
             <p className={"body1 text-white relative top-[90px]"}>
                 Finding the right people and building high performing teams can
                 be hard. Most companies aren’t tapping into the abundance of global
