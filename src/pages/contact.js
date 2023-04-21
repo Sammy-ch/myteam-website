@@ -5,15 +5,17 @@ import Image from "next/image";
 import chartIco from "public/images/icons/icon-chart.svg";
 import cogIco from "public/images/icons/icon-cog.svg";
 import personIco from "public/images/icons/icon-person.svg";
-import {useForm} from "react-hook-form";
-
+import Input from "@/components/Input";
+import {FormProvider, useForm} from "react-hook-form";
 
 
 const Contact = () => {
-    const {register,handleSubmit,formState:{errors} } = useForm();
-    const onSubmit = (data) => {
+    const methods = useForm();
+
+    const onSubmit = methods.handleSubmit(data => {
         console.log(data)
-    }
+    })
+
     return (
         <section className={"flex justify-center px-[165px] max-h-screen gap-[100px] pb-[120px]"}>
             <div className={"flex flex-col gap-[32px]"}>
@@ -26,38 +28,60 @@ const Contact = () => {
                 </div>
             </div>
 
-                <form onSubmit={handleSubmit(onSubmit)} className={"flex flex-col text-white w-[542px] gap-[24px]"}>
-                    <input type="text" placeholder="Name"
-                              className={"w-[540px] h-[42px] input"} {...register("Name", {
-                        required: true,
-                        maxLength: 80
-                    })} />
+            <FormProvider {...methods}>
+                <form onSubmit={e => e.preventDefault()} noValidate autoComplete="off" className={"flex flex-col text-white w-[542px] gap-[24px]"}>
 
-                        <input type="email" placeholder="Email Address"
-                                className={"w-[540px] h-[42px] input"} {...register("Email ", {
-                        required: true,
-                        max: 0,
-                        maxLength: 100
-                    })} />
+                    <Input type={"text"} id={"name"} placeholder={"Name"} label={"Name"} validation={{
+                        required: {
+                            value: true,
+                            message:"This field is required",
+                        },
+                        minlength: {
+                            value: 6,
+                            message:"min limit is 6 characters"
+                        }
+                    }}/>
+                    <Input type="email" id={"email"} placeholder={"Email Address"} label={"Email"} validation={{
+                        required: {
+                            value: true,
+                            message:"This field is required",
+                        },
+                        pattern: {
+                            value:
+                                /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                            message: 'Please use a valid email address',
+                        },
+                    }} />
+                    <Input type={"text"} id={"company"} placeholder={"Company Name"} label={"Company"} validation={{
+                        required: {
+                            value: true,
+                            message:"This field is required",
+                        }
+                    }} />
 
-                    <input type="text" placeholder="Company Name"
-                              className={"w-[540px] h-[42px] input"} {...register("Company Name", {
-                        required: true,
-                        max: 20,
-                        min: 5,
-                        maxLength: 30,
-                        pattern: /^\S+@\S+$/i
-                    })} />
-                    <textarea placeholder="Message" className={"h-[84px]"} {...register("Message", {
-                        required: true,
-                        max: 2400,
-                        min: 1,
-                        maxLength: 2400
-                    })} />
+                    <Input type={"text"} id={"title"} placeholder={"Title"} label={"Title"} validation={{
+                        required:{
+                            value: true,
+                            message:"This field is required"
+                        }
+                    }}/>
 
-                    <button type="submit" className={"border w-[123px] h-[48px] bg-white text-[#004047] rounded-full"} >Submit</button>
+                    <Input name={"message"} id={"message"} label={"Message"} placeholder={"Message"} multiline={true} validation={{
+                        required:{
+                            value: true,
+                            message:"This field is required"
+                        },
+                        maxLength: {
+                            value: 200,
+                            message: '200 characters max',
+                        },
+                    }}/>
+                    <button onClick={onSubmit}
+                            className={"border w-[123px] h-[48px] bg-white text-[#004047] rounded-full"}>
+                        Submit
+                    </button>
                 </form>
-
+            </FormProvider>
         </section>
     )
 }
