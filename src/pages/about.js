@@ -12,7 +12,7 @@ const about = () =>{
                 <title>myteam - About</title>
                 <meta name={"my-team-website"} content={"About"}/>
             </Head>
-            <main className={"relative z-0 wrapper overflow-x-hidden"}>
+            <main className={"relative"}>
                 <About/>
                 <Directors/>
                 <Clients/>

@@ -15,10 +15,11 @@ export default function App({ Component, pageProps }) {
               <meta name="viewport" content="width=device-width, initial-scale=1" />
               <link rel="shortcut icon" href="/images/favicon-32x32.png" type="image/x-icon" />
           </Head>
-          <main className={`${livvic.className} wrapper midnight-green min-h-screen`}>
-              <Navbar/>
-              <Component {...pageProps} />
-              <Footer/>
+          <main className={`${livvic.className} midnight-green min-h-screen wrapper `}>
+                  
+              <Navbar />
+                  <Component {...pageProps} />
+                <Footer/> 
           </main>
       </>
   )

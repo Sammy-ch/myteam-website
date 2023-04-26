@@ -10,7 +10,7 @@ export default function Home() {
           <title>myteam - Home</title>
           <meta name={"my-team-website"} content={"Home"}/>
         </Head>
-          <main className={"relative wrapper overflow-x-hidden"}>
+          <main className={""}>
             <Hero/>
               <Features/>
               <Reviews/>
@@ -19,3 +19,4 @@ export default function Home() {
     </>
   )
 }
+

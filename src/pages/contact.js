@@ -1,7 +1,5 @@
 import React from "react";
 import Image from "next/image";
-// import topBgPattern from "public/images/bg-home-about-contact/bg-pattern-about-2-contact-1.svg";
-// import bottomBgPattern from "public/images/bg-home-about-contact/bg-pattern-contact-2.svg";
 import chartIco from "public/images/icons/icon-chart.svg";
 import cogIco from "public/images/icons/icon-cog.svg";
 import personIco from "public/images/icons/icon-person.svg";
@@ -17,11 +15,12 @@ const Contact = () => {
     })
 
     return (
-        <section className={"flex justify-center px-[165px] max-h-screen gap-[100px] pb-[120px]"}>
-            <div className={"flex flex-col gap-[32px]"}>
-                <h1 className={"h-small text-white"}>Contact</h1>
+        <section className={"contact-background flex md:flex-col justify-center px-[165px] md:px-[113px] xs:px-[24px] gap-[100px] pb-[120px] overflow-x-hidden md:overflow-visible xs:overflow-x-hidden"}>
+
+            <div className={"flex flex-col gap-[32px] xs:gap-[16px] md:items-center"}>
+                <h1 className={"h-small text-white xs:text-[40px]"}>Contact</h1>
                 <span className={"light-coral font-bold leading-[48px] text-[32px]"}>Ask us about</span>
-                <div className={"flex flex-col gap-[8px] text-white w-[540px] h-[232px]"}>
+                <div className={"flex flex-col gap-[8px] text-white w-[540px] xs:w-[290px] h-[232px] "}>
                     <div className={"flex flex-row gap-[23px] items-center "}><Image src={personIco} alt={"personIcon"} className={"w-72px h-[72px]"}/> <span>The quality of our talent network</span> </div>
                     <div className={"flex flex-row gap-[23px] items-center"}><Image src={cogIco} alt={"cogIco"} className={"w-72px h-[72px]"}/> <span>Usage & implementation of our software</span> </div>
                     <div className={"flex flex-row gap-[23px]  items-center"}><Image src={chartIco} alt={"chartIco"} className={"w-72px h-[72px]"}/> <span>How we help drive innovation</span> </div>
@@ -29,7 +28,7 @@ const Contact = () => {
             </div>
 
             <FormProvider {...methods}>
-                <form onSubmit={e => e.preventDefault()} noValidate autoComplete="off" className={"flex flex-col text-white w-[542px] gap-[24px]"}>
+                <form onSubmit={e => e.preventDefault()} noValidate autoComplete="off" className={"flex flex-col text-white w-[542px] md:w-[530px] gap-[24px]"}>
 
                     <Input type={"text"} id={"name"} placeholder={"Name"} label={"Name"} validation={{
                         required: {

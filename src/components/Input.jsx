@@ -10,12 +10,12 @@ export const Input = ({name,label,id,type,placeholder,validation,multiline,class
     const IsInvalid = isFormInvalid(inputError)
 
     return (
-        <div className={"flex flex-col text-white w-[542px] gap-[8px]"}>
+        <div className={"flex flex-col text-white gap-[8px]"}>
             {multiline ? (
                 <textarea
                     id={id}
                     type={type}
-                    className={"min-h-[82px] max-h-[82px] resize-y"}
+                    className={"min-h-[82px] xs:w-[327px] resize-y input"}
                     placeholder={placeholder}
                     {...register(`${name}`,validation)}>
                 </textarea>
@@ -23,7 +23,7 @@ export const Input = ({name,label,id,type,placeholder,validation,multiline,class
                 <input
                     id={id}
                     type={type}
-                    className={"w-[540px] h-[42px] input"}
+                    className={"w-[540px] xs:w-[327px] h-[42px] input"}
                     placeholder={placeholder}
                     {...register(label, validation)}
                 />
