@@ -129,6 +129,7 @@ p, h1, h2, h3, h4, h5, h6 {
   border: none;
   border-bottom: 1px solid white;
   background-color: transparent;
+
 }
 
 .input:hover{
@@ -225,6 +226,78 @@ p, h1, h2, h3, h4, h5, h6 {
 }
 
 }
+
+
+.footer{
+  background-color: rgb(0,37,41);
+  display: grid;
+  align-items: center;
+  justify-content: space-between;
+  grid-template-areas: 
+    "navigation location social "
+    "navigation location social "
+    "navigation location cpy    "
+  ;
+}
+
+.navigation{
+  grid-area: navigation;
+}
+
+.cpy{
+  grid-area: cpy;
+}
+
+.location{
+  grid-area: location;
+}
+
+.social{
+  grid-area: social;
+  justify-self: right;
+}
+
+@media screen and (max-width: 768px){
+  .footer{
+    display: grid;
+    row-gap: 32px;
+    align-items: center;
+    grid-template-areas:
+    "navigation . location"
+    "navigation . location"
+    "social     .   cpy   "
+  ;
+  }
+
+  .social{
+    grid-area: social;
+    justify-self: center;
+  }
+
+}
+
+@media screen and (max-width:640px) {
+  .footer{
+    display: grid;
+    row-gap: 32px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas:
+    "navigation"
+    "location"
+    "social"
+    "cpy"
+    ;
+  }
+
+  .navigation{
+    grid-area: navigation;
+    justify-self: center;
+  }
+
+}
+
 
 
 @media only screen and (max-width: 375px){

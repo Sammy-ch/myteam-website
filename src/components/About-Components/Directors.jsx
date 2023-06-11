@@ -62,7 +62,8 @@ const Directors = () => {
     return (
         <section className={"directors-card relative z-1 flex flex-col justify-center items-center px-[165px] md:px-[98px] xs:px-[24px] py-[140px] text-center bg-[#004047] "}>
             <h2 className={"h2 text-white xs:text-[32px]"}> Meet the directors</h2>
-            <div className={"grid grid-cols-3 md:grid-cols-2 xs:grid-cols-1 gap-[30px] md:gap-x-[50px] pt-[65px] gap-y-[76px] md:relative"}>
+            
+            <div className={"grid grid-cols-3 lg:grid-cols-2 sm:grid-cols-1 gap-[30px] md:gap-x-[50px] pt-[65px] gap-y-[76px] "}>
                 <DirectorCard title={"Founder & CEO"} name={"Nikita Marks"} profile={profile1} description={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime quae tempore dicta ducimus "}/>
                 <DirectorCard title={"Co-founder & COO"} name={"Cristian Duncan"} profile={profile2} description={"lorem2"}/>
                 <DirectorCard title={"Co-founder & CTO"} name={"Cruz Hamer"} profile={profile3} description={"lorem3"}/>

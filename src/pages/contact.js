@@ -15,12 +15,12 @@ const Contact = () => {
     })
 
     return (
-        <section className={"contact-background flex md:flex-col justify-center px-[165px] md:px-[113px] xs:px-[24px] gap-[100px] pb-[120px] overflow-x-hidden md:overflow-visible xs:overflow-x-hidden"}>
+        <section className={"contact-background flex md:flex-col  px-[165px] lg:px-[50px]  justify-between pb-[120px] "}>
 
             <div className={"flex flex-col gap-[32px] xs:gap-[16px] md:items-center"}>
                 <h1 className={"h-small text-white xs:text-[40px]"}>Contact</h1>
                 <span className={"light-coral font-bold leading-[48px] text-[32px]"}>Ask us about</span>
-                <div className={"flex flex-col gap-[8px] text-white w-[540px] xs:w-[290px] h-[232px] "}>
+                <div className={"flex flex-col gap-[8px] text-white w-[540px] sm:w-full h-[232px] "}>
                     <div className={"flex flex-row gap-[23px] items-center "}><Image src={personIco} alt={"personIcon"} className={"w-72px h-[72px]"}/> <span>The quality of our talent network</span> </div>
                     <div className={"flex flex-row gap-[23px] items-center"}><Image src={cogIco} alt={"cogIco"} className={"w-72px h-[72px]"}/> <span>Usage & implementation of our software</span> </div>
                     <div className={"flex flex-row gap-[23px]  items-center"}><Image src={chartIco} alt={"chartIco"} className={"w-72px h-[72px]"}/> <span>How we help drive innovation</span> </div>
@@ -28,9 +28,9 @@ const Contact = () => {
             </div>
 
             <FormProvider {...methods}>
-                <form onSubmit={e => e.preventDefault()} noValidate autoComplete="off" className={"flex flex-col text-white w-[542px] md:w-[530px] gap-[24px]"}>
+                <form onSubmit={e => e.preventDefault()} noValidate autoComplete="off" className={"flex flex-col text-white gap-[24px]"}>
 
-                    <Input type={"text"} id={"name"} placeholder={"Name"} label={"Name"} validation={{
+                    <Input type={"text"} id={"name"} placeholder={"Name"} label={"Name"} className={"w-7"} validation={{
                         required: {
                             value: true,
                             message:"This field is required",

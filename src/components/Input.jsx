@@ -15,7 +15,7 @@ export const Input = ({name,label,id,type,placeholder,validation,multiline,class
                 <textarea
                     id={id}
                     type={type}
-                    className={"min-h-[82px] xs:w-[327px] resize-y input"}
+                    className={"min-h-[82px] resize-y input lg:w-full "}
                     placeholder={placeholder}
                     {...register(`${name}`,validation)}>
                 </textarea>
@@ -23,7 +23,7 @@ export const Input = ({name,label,id,type,placeholder,validation,multiline,class
                 <input
                     id={id}
                     type={type}
-                    className={"w-[540px] xs:w-[327px] h-[42px] input"}
+                    className={"w-[540px] h-[42px] input lg:w-full "}
                     placeholder={placeholder}
                     {...register(label, validation)}
                 />

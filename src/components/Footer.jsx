@@ -7,9 +7,9 @@ import Twitter from "public/images/icons/icon-twitter.svg";
 import Pinterest from "public/images/icons/icon-pinterest.svg";
 const Footer = () => {
     return (
-        <footer className={"w-full flex sm:flex-col justify-between py-[48px] px-[165px] sm:px-[24px] sm:h-[450px] md:px-[40px] bg-[#002529] md:h-[271px]  "}>
+        <footer className={"footer py-[50px] px-[165px] md:px-[40px] lg:px-[20px]"}>
  
-                <section className={"flex flex-col gap-7 relative w-[150px]  sm:left-[7rem] xs:left-[5rem] items-center "}>
+                <section className={"flex flex-col gap-7 w-[150px] items-center navigation"}>
                     <Image src={logo} alt={"mylogo"} className={"h-[35px] sm:h-[24px] w-[140px] sm:w-[96px] md:mb-[20px]"}/>
                     <div className={"flex gap-10 text-white"}>
                         <Link href="/" className={"hover:text-[#F67E7E]"}>home</Link>
@@ -17,7 +17,7 @@ const Footer = () => {
                     </div>
                 </section>
 
-                <section className={"flex flex-col text-white opacity-80 sm:opacity-50 md:text-right sm:text-center md:relative md:left-[200px] sm:left-0 "}>
+                <section className={"flex flex-col text-white location"}>
                     <div>987 Hillcrest Lane</div>
                     <div>Irvine, CA</div>
                     <div>California 92714</div>
@@ -25,23 +25,19 @@ const Footer = () => {
                 </section>
 
 
-            <section className={"flex flex-col gap-12 sm:gap-6"}>
-                <div className={"flex flex-row gap-4 justify-end sm:justify-center relative lg:left-[-34.1rem] lg:top-[8.5rem] xs:left-0 xs:top-0"}>
+                <div className={"flex flex-row gap-7 social "}>
                     <Link href='/' className={"hover:text-[#F67E7E]"}><Image src={Facebook} alt={"FB_LOGO"}/></Link>
                     <Link href='/' className={"hover:text-[#F67E7E]"}><Image src={Pinterest} alt={"PINT_LOGO"}/></Link>
                     <Link href='/' className={"hover:text-[#F67E7E]"}><Image src={Twitter} alt={"TWIT_LOGO"}/></Link>
                 </div>
-                <div className={"text-white opacity-50 flex sm:justify-center relative lg:top-[3.5rem] lg:right-[6.5rem] xs:left-0 xs:top-0"}>
+
+                <div className={"text-white cpy"}>
                     Copyright 2020.All Rights Reserved
                 </div>
-            </section>
+            
 
         </footer>
     )
 }
 
 export default Footer;
-
-// md:absolute md:translate-y-[140px] md:left-[430px]
-
-// md:relative md:top-[150px] md:-left-[550px] logo
